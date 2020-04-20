@@ -91,8 +91,11 @@ test("should be mad if the happiness level drops below zero" , () => {
   tama.happinessLevel = 0;
   expect(tama.areYouMad()).toEqual(true);
 });
+test ("should get very angry if 10 seconds pass without any play" , () => {
+  jest.advanceTimersByTime(10001); 
+  expect(tama.areYouMad()).toEqual(true);
 });
-
+});
 
 
 
