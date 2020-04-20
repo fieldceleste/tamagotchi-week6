@@ -32,7 +32,7 @@ export class Tamagotchi {
       setTimeout(() => {
         this.wait = false;
 
-      }, 1001 * 2)
+      }, 2001)
     }
   }
   message() {
@@ -55,5 +55,19 @@ export class Tamagotchi {
       return true;
     }
   }
+
+sleep(){
+  this.sleepLevel = 10;
 }
 
+waiting2() {
+  if (this.wait === false && this.alive === true) {
+    this.sleepLevel = 10
+    this.wait = true;
+    setTimeout(() => {
+      this.wait = false;
+
+    }, 5001)
+  }
+}
+}

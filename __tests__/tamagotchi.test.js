@@ -28,8 +28,8 @@ test('should be hungry if the food level drops below zero', function(){
   tama.foodLevel = 0;
   expect(tama.areYouStarving()).toEqual(true);
 });
-test("should get very hungry if 9 seconds pass without food " , () => {
-  jest.advanceTimersByTime(90001);
+test("should get very hungry if 10 seconds pass without food " , () => {
+  jest.advanceTimersByTime(10001);
   expect(tama.areYouStarving()).toEqual(true);
 });
 test ("should have food level of 10 when fed" , () => {
@@ -57,6 +57,21 @@ test ("should have a sleep level of 7 after 3001 milliseconds", () => {
 test ("should be tired if the sleep level drops below zero" , () => {
   tama.sleepLevel = 0;
   expect(tama.areYouSleepy()).toEqual(true);
+});
+test ("should get very sleepy if 10 seconds pass without sleep" , () => {
+  jest.advanceTimersByTime(10001); 
+  expect(tama.areYouSleepy()).toEqual(true);
+});
+test ("should have sleep level of 10 after sleeeping" , () => {
+  jest.advanceTimersByTime(8001);
+  tama.sleep();
+  expect(tama.sleepLevel).toEqual(10);
+});
+test ("timer should wait for 5 seconds after sleeping" , () => {
+  tama.waiting2();
+  expect(tama.wait).toBe(true)
+  jest.advanceTimersByTime(5001); 
+  expect(tama.wait).toBe(false)
 });
 });
 
