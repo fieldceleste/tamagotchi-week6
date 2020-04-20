@@ -2,7 +2,7 @@ export class Tamagotchi {
   constructor(name) {
     this.name = name;
     this.foodLevel = 10;
-    // this.sleep = 10;
+    this.sleepLevel = 10;
     this.wait = false;
     this.alive = true;
 
@@ -43,4 +43,12 @@ export class Tamagotchi {
       }, 1001 * 2)
    }
   }
+  message() {
+    if(this.foodLevel < 4){
+      return "I'm hungry!"
+    }
+  }
 }
+// sleep() {
+ 
+
