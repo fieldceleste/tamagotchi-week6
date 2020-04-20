@@ -35,7 +35,7 @@ export class Tamagotchi {
       }, 2001)
     }
   }
-  message() {
+  messageFood() {
     if (this.foodLevel < 4) {
       return "I'm hungry!"
     }
@@ -68,6 +68,11 @@ waiting2() {
       this.wait = false;
 
     }, 5001)
+  }
+}
+messageSleep(){
+  if(this.sleepLevel < 4){
+    return "I'm sleepy!"
   }
 }
 }

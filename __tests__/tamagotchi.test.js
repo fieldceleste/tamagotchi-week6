@@ -45,7 +45,7 @@ test ("timer should wait for 2 seconds after feeding" , () => {
 });
 test("should see an alert message when the food level is 3 or below", () => {
   jest.advanceTimersByTime(7001); 
-  expect(tama.message()).toEqual("I'm hungry!");
+  expect(tama.messageFood()).toEqual("I'm hungry!");
 });
 test ("should have a sleep level of 10 when created" ,() => {
   expect(tama.sleepLevel).toEqual(10);
@@ -73,7 +73,12 @@ test ("timer should wait for 5 seconds after sleeping" , () => {
   jest.advanceTimersByTime(5001); 
   expect(tama.wait).toBe(false)
 });
+test("should see an alert message when the sleep level is 3 or below", () => {
+  jest.advanceTimersByTime(7001); 
+  expect(tama.messageSleep()).toEqual("I'm sleepy!");
 });
+});
+
 
 
 
