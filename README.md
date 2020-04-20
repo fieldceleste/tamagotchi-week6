@@ -37,11 +37,15 @@ _No known bugs at this time_
 
 |Behavior|Input|Output|
 | :-----|:-----|:-----|
-| spec1: set food level to 0 when it is created (press start button?) |:-----|:-----|
+| spec1: set food level to 10 when it is created (press start button?) |:-----|:-----|
 | spec2: when fed, level goes up to 10.|:-----|:-----|
 | spec3: food level decreases 1level every 3 minutes (may vary) |:-----|:-----|
 | spec4: when the food level is less than 3, shows alert. |:-----|:-----|
 | spec5: when the food level is 0, game over. |:-----|:-----|
+| spec6: set sleep level to 10 when it is created (press start button?) |:-----|:-----|
+| spec6: when we let tamagotchi sleep, refill sleep level |:-----|:-----|
+
+
 
 
 ## Legal

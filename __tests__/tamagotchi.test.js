@@ -37,7 +37,6 @@ test ("should have food level of 10 when fed" , () => {
   tama.feed();
   expect(tama.foodLevel).toEqual(10);
 });
-
 test ("timer should wait for 2 seconds after feeding" , () => {
   tama.waiting();
   expect(tama.wait).toBe(true)
@@ -54,6 +53,10 @@ test ("should have a sleep level of 10 when created" ,() => {
 test ("should have a sleep level of 7 after 3001 milliseconds", () => {
   jest.advanceTimersByTime(3001); 
   expect(tama.sleepLevel).toEqual(7);
+});
+test ("should be tired if the sleep level drops below zero" , () => {
+  tama.sleepLevel = 0;
+  expect(tama.areYouSleepy()).toEqual(true);
 });
 });
 
