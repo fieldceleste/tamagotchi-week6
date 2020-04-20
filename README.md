@@ -14,7 +14,8 @@ _This application will build a tamagothchi character and will require us to fed,
 * _Enter $ npm test in terminal_
 
 ## Known Bugs
-_No known bugs at this time_
+_No known bugs at this time_ 
+
 
 ## Technology
 
@@ -36,25 +37,18 @@ _No known bugs at this time_
 
 |Behavior|Input|Output|
 | :-----|:-----|:-----|
-| It will only accept number values| 5 | "5" |√|
-| It will be able to create an object called User| object=user| works |√| 
-| It will take users age and turn it into earth years.  | 30 | 30 Earth years |√| 
-| It will take users age in earth years and display age in Mercury years.(A Mercury year is .24 Earth years.) | 30 | 125 Mercury years |√|
-| It will take users age in earth years and display age in Venus years. (A Venus year is .62 Earth years.) | 30 | 48.4 Venus years |√|
-| It will take a users age in earth years  and display age in Mars years. (A Mars year is 1.88 Earth years.) | 30 | 15.9 Mars years |√|
-| It will take a users age in earth years and display age in Jupitar years. (A Jupiter year is 11.86 Earth years.) | 30 | 2.53 Jupiter years |√|
-| It will take users life expectancy age for their demographic and will minus it from their current age, to show many years left they have to live. (White female averge age: 91 years) | 30 | 61 Earth years left |√|
-| It will take users life expectancy years left and display their years left on Mercury. | 30 - Current year | 213 Mercury years left |√|
-| It will take users life expectancy years left and display their years left on Venus. | 30 - Current year | 82.3 Venus years left |√|
-| It will take users life expectancy years left and display their years left on Mars. | 30 - Current year | 27.1 Mars years left |√|
-| It will take users life expectancy years left and display their years left on Mars. | 30 - Current year  | 4.3 Jupiter years left |√|
-| If the user inputs their age and it's higher than the averge life expectancy, it will return how many years past that they have lived. | 91 | 10 years longer than expected, congrats!|
+| spec1: set food level to 0 when it is created (press start button?) |:-----|:-----|
+| spec2: when fed, level goes up to 10 (keep pressing feed btn or dont have to?)|:-----|:-----|
+| spec3: food level decreases 1level every 3 minutes (may vary) |:-----|:-----|
+| spec4: when the food level is less than 3, shows alert. |:-----|:-----|
+| spec5: when the food level is 0, game over. |:-----|:-----|
+
 
 ## Legal
 
 #### MIT License
 
-### Copyright (c) 2020 Celeste Field
+### Copyright (c) 2020 Celeste Field and Chisato Murakami
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
