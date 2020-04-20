@@ -87,6 +87,10 @@ test ('should have a happiness level of 7 after 3001 milliseconds', () => {
   jest.advanceTimersByTime(3001); 
   expect(tama.happinessLevel).toEqual(7);
 });
+test("should be mad if the happiness level drops below zero" , () => {
+  tama.happinessLevel = 0;
+  expect(tama.areYouMad()).toEqual(true);
+});
 });
 
 

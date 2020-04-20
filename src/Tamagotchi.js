@@ -82,4 +82,12 @@ export class Tamagotchi {
       this.happinessLevel--;
     }, 1000);
   }
+
+  areYouMad() {
+    if (this.happinessLevel > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 }
