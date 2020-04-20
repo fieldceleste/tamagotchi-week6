@@ -77,6 +77,9 @@ test("should see an alert message when the sleep level is 3 or below", () => {
   jest.advanceTimersByTime(7001); 
   expect(tama.messageSleep()).toEqual("I'm sleepy!");
 });
+test ('should have happiness level of 10 when created' , () => {
+  expect(tama.happinessLevel).toEqual(10);
+});
 });
 
 

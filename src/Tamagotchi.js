@@ -3,9 +3,10 @@ export class Tamagotchi {
     this.name = name;
     this.foodLevel = 10;
     this.sleepLevel = 10;
+    this.happinessLevel = 10;
     this.wait = false;
     this.alive = true;
-
+    
 
   }
   setHunger() {
