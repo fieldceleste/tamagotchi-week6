@@ -3,6 +3,8 @@ export class Tamagotchi {
     this.name = name;
     this.foodLevel = 10;
     // this.sleep = 10;
+    this.wait = false;
+    this.alive = true;
 
 
   }
@@ -28,6 +30,17 @@ export class Tamagotchi {
     }
   }
   feed() {
-    this.foodLevel = 10;
+      this.foodLevel = 10;
+    }
+    
+   waiting() {
+    if(this.wait === false && this.alive === true) {
+      this.foodLevel = 10
+      this.wait = true;
+      setTimeout(() => {
+        this.wait = false;
+
+      }, 1001 * 2)
+   }
   }
 }

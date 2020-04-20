@@ -37,4 +37,19 @@ test ("should have food level of 10 when fed" , () => {
   expect(tama.foodLevel).toEqual(10);
 });
 
+test ("timer should wait for 2 seconds after feeding" , () => {
+  tama.waiting();
+  expect(tama.wait).toBe(true)
+  jest.advanceTimersByTime(2002); 
+  expect(tama.wait).toBe(false)
 });
+});
+
+
+
+
+
+
+
+
+
