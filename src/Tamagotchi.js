@@ -6,7 +6,7 @@ export class Tamagotchi {
     this.happinessLevel = 10;
     this.wait = false;
     this.alive = true;
-    
+
 
   }
   setHunger() {
@@ -57,23 +57,29 @@ export class Tamagotchi {
     }
   }
 
-sleep(){
-  this.sleepLevel = 10;
-}
-
-waiting2() {
-  if (this.wait === false && this.alive === true) {
-    this.sleepLevel = 10
-    this.wait = true;
-    setTimeout(() => {
-      this.wait = false;
-
-    }, 5001)
+  sleep() {
+    this.sleepLevel = 10;
   }
-}
-messageSleep(){
-  if(this.sleepLevel < 4){
-    return "I'm sleepy!"
+
+  waiting2() {
+    if (this.wait === false && this.alive === true) {
+      this.sleepLevel = 10
+      this.wait = true;
+      setTimeout(() => {
+        this.wait = false;
+
+      }, 5001)
+    }
   }
-}
+  messageSleep() {
+    if (this.sleepLevel < 4) {
+      return "I'm sleepy!"
+    }
+  }
+
+  setHappiness() {
+    setInterval(() => {
+      this.happinessLevel--;
+    }, 1000);
+  }
 }

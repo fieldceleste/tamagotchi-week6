@@ -8,12 +8,13 @@ describe("Tama", () => {
     tama = new Tamagotchi('Tama');
     tama.setHunger();
     tama.setSleep();
+    tama.setHappiness();
   });
 
   afterEach(function () {
     jest.clearAllTimers();
   });
-
+//////------FOOD Level //////////////////////////////////////////////////////
 test('should have a name and food level of 10 when created' , () => {
   expect(tama.name).toEqual("Tama");
   expect(tama.foodLevel).toEqual(10);
@@ -47,6 +48,7 @@ test("should see an alert message when the food level is 3 or below", () => {
   jest.advanceTimersByTime(7001); 
   expect(tama.messageFood()).toEqual("I'm hungry!");
 });
+//sleep level////////////////////////////////////////
 test ("should have a sleep level of 10 when created" ,() => {
   expect(tama.sleepLevel).toEqual(10);
 });
@@ -77,8 +79,13 @@ test("should see an alert message when the sleep level is 3 or below", () => {
   jest.advanceTimersByTime(7001); 
   expect(tama.messageSleep()).toEqual("I'm sleepy!");
 });
+//happiness level////////////////////////////////////////
 test ('should have happiness level of 10 when created' , () => {
   expect(tama.happinessLevel).toEqual(10);
+});
+test ('should have a happiness level of 7 after 3001 milliseconds', () => {
+  jest.advanceTimersByTime(3001); 
+  expect(tama.happinessLevel).toEqual(7);
 });
 });
 
