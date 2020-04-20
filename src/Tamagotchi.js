@@ -2,6 +2,7 @@ export class Tamagotchi {
   constructor(name) {
     this.name = name;
     this.foodLevel = 10;
+    // this.sleep = 10;
 
 
   }

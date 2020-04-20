@@ -26,7 +26,10 @@ test('should have a food level of 7 after 3001 milliseconds', () => {
 test('should be hungry if the food level drops below zero', function(){
   tama.foodLevel = 0;
   expect(tama.areYouStarving()).toEqual(true);
-})
-
+});
+test("should get very hungry if 9 seconds pass without food " , () => {
+  jest.advanceTimersByTime(90001);
+  expect(tama.areYouStarving()).toEqual(true);
+});
 
 });
