@@ -7,6 +7,7 @@ describe("Tama", () => {
   beforeEach(function () {
     tama = new Tamagotchi('Tama');
     tama.setHunger();
+    tama.setSleep();
   });
 
   afterEach(function () {
@@ -49,6 +50,10 @@ test("should see an alert message when the food level is 3 or below", () => {
 });
 test ("should have a sleep level of 10 when created" ,() => {
   expect(tama.sleepLevel).toEqual(10);
+});
+test ("should have a sleep level of 7 after 3001 milliseconds", () => {
+  jest.advanceTimersByTime(3001); 
+  expect(tama.sleepLevel).toEqual(7);
 });
 });
 

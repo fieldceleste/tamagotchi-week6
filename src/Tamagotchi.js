@@ -48,7 +48,15 @@ export class Tamagotchi {
       return "I'm hungry!"
     }
   }
-}
+
 // sleep() {
+  setSleep() {
+    setInterval(() => {
+      this.sleepLevel--;
+    }, 1000);
+  }
+
+}
+
  
 
