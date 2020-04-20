@@ -90,4 +90,8 @@ export class Tamagotchi {
       return true;
     }
   }
+
+  play() {
+    this.happinessLevel = 10;
+  }
 }

@@ -95,6 +95,12 @@ test ("should get very angry if 10 seconds pass without any play" , () => {
   jest.advanceTimersByTime(10001); 
   expect(tama.areYouMad()).toEqual(true);
 });
+
+test ("should have full happiness level of 10 after playing" , () => {
+  jest.advanceTimersByTime(8001);
+  tama.play();
+  expect(tama.happinessLevel).toEqual(10);
+});
 });
 
 
