@@ -3,11 +3,9 @@ export class Tamagotchi {
     this.name = name;
     this.foodLevel = 10;
     this.sleepLevel = 10;
-    this.happinessLevel = 10;
+    this.playfulLevel = 10;
     this.wait = false;
     this.alive = true;
-
-
   }
   setHunger() {
     setInterval(() => {
@@ -77,14 +75,14 @@ export class Tamagotchi {
     }
   }
 
-  setHappiness() {
+  setPlayful() {
     setInterval(() => {
-      this.happinessLevel--;
+      this.playfulLevel--;
     }, 1000);
   }
 
   areYouMad() {
-    if (this.happinessLevel > 0) {
+    if (this.playfulLevel > 0) {
       return false;
     } else {
       return true;
@@ -92,6 +90,28 @@ export class Tamagotchi {
   }
 
   play() {
-    this.happinessLevel = 10;
+    this.playfulLevel = 10;
+  }
+
+  waiting3() {
+    if (this.wait === false && this.alive === true) {
+      this.playfulLevel = 10
+      this.wait = true;
+      setTimeout(() => {
+        this.wait = false;
+      }, 4001)
+    }
+  }
+
+  aliveCheck() {
+    if (this.foodLevel <= 0 && this.sleepLevel <= 0 && this.playfulLevel <= 0) {
+      return  false;
+    } else {
+      return  true;
+    }
   }
 }
+
+
+
+
