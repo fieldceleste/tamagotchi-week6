@@ -21,10 +21,13 @@ export class Tamagotchi {
   }
 
   areYouStarving() {
-    if (this.foodLevel > 0){
+    if (this.foodLevel > 0) {
       return false;
     } else {
       return true;
     }
+  }
+  feed() {
+    this.foodLevel = 10;
   }
 }

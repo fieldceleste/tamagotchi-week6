@@ -31,5 +31,10 @@ test("should get very hungry if 9 seconds pass without food " , () => {
   jest.advanceTimersByTime(90001);
   expect(tama.areYouStarving()).toEqual(true);
 });
+test ("should have food level of 10 when fed" , () => {
+  jest.advanceTimersByTime(8001);
+  tama.feed();
+  expect(tama.foodLevel).toEqual(10);
+});
 
 });
