@@ -1,3 +1,22 @@
 body {
-  background-color: #7FDBFF;
+  background-color:skyblue;
+  text-align: center;
+}
+h1 {
+  padding-top: 60px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
+}
+h4{
+  font-family: 'Courier New', Courier, monospace;
+}
+.tama{
+  justify-content: center;
+}
+.level{
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+.btn {
+  font-family: 'Courier New', Courier, monospace;
 }

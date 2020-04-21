@@ -24,7 +24,7 @@ export class Tamagotchi {
     this.foodLevel = 10;
   }
   feedSnack(){
-    if(this.foodLevel >= 9) { 
+    if(this.foodLevel >= 10) { 
       return "Im full";     
     } else {
       this.foodLevel += 1;
@@ -68,7 +68,7 @@ export class Tamagotchi {
       this.sleepLevel += 5;
     }
   }
-  
+
   waiting2() {
     if (this.wait === false && this.alive === true) {
       this.sleepLevel = 10
@@ -119,10 +119,13 @@ export class Tamagotchi {
   }
 
   aliveCheck() {
-    if (this.foodLevel <= 0 && this.sleepLevel <= 0 && this.playfulLevel <= 0) {
-      return  false;
+    let levelSum = this.foodLevel + this.sleepLevel + this.playfulLevel;
+    if (levelSum === 0) {
+      return  "Your Tamagotchi is dead!";
+    } else if (levelSum < 18 && levelSum > 3) {
+      return  "Im good";
     } else {
-      return  true;
+      return "I'm enjoying life";
     }
   }
 }

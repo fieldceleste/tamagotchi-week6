@@ -1,16 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script type="text/javascript" src="bundle.js"></script>
-    <title>Ping Pong</title>
+    <title>Tamagotchi</title>
   </head>
   <body>
-    <form id="ping-pong-form">
-      <label for="goal">Enter a number:</label>
-      <input id="goal" type="number">
-      <button type="submit">Submit</button>
-    </form>
-    <ul id="solution"></ul>
-  <script type="text/javascript" src="bundle.js"></script></body>
+    <h1>Tamagotchi</h1>
+
+    <h4>Meet: Tama</h4>
+
+    <div class="buttons">
+      <button type="button" id="start" class="btn btn-outline-success btn-lg"> Start </button>
+    </div>
+    <!-- <div id="timer">
+      0:10 seconds
+    </div> -->
+
+<img src ="https://66.media.tumblr.com/71ca3513d1a4c417e7da20e9f902ed02/tumblr_oqmhz6vBWf1wq3wtao1_500.gifv" alt="photo of tama" class= "tama">
+    <div class="buttons">
+      <button type="button" id="food" class="btn btn-outline-success btn-lg"> Feed Me </button>
+   
+      <button type="button" id="sleep" class="btn btn-outline-success btn-lg"> Take a Nap </button>
+   
+      <button type="button" id="play" class="btn btn-outline-success btn-lg"> Play with Me </button>
+    </div>
+    <br>
+    <br>
+    <div class="level">
+      <div class="level">
+        <p>Food level:<span id="food-level"></span></p>
+      </div>
+      <div class="level">
+        <p>Sleep level:<span id="sleep-level"></span></p>
+      </div>
+      <div class="level">
+        <p>Playful level:<span id="playful-level"></span></p>
+      </div>
+    </div>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

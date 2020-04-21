@@ -17,7 +17,7 @@ plugins: [
   new UglifyJsPlugin({ sourceMap: true }),
   new CleanWebpackPlugin(),
   new HtmlWebpackPlugin({
-    title: 'project-name-here',
+    title: 'Tomogotchi',
     template: './src/index.html',
     inject: 'body'
   })

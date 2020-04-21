@@ -150,11 +150,13 @@ describe("Tama", () => {
     jest.advanceTimersByTime(4001);
     expect(tama.wait).toBe(false)
   });
+
   test("should increase play level by 3, when given a toy when playfulLevel is at 6", () => {
-    jest.advanceTimersByTime(3001);
+    jest.advanceTimersByTime(7001);
     tama.giveToy();
-    expect(tama.playfulLevel).toEqual(10);
+    expect(tama.playfulLevel).toEqual(6);
   });
+  
   test("should not increase playfulLevel by 3 if playfulLevel is at 9", () => {
     jest.advanceTimersByTime(1001);
     expect(tama.playfulLevel).toEqual(9);
@@ -162,10 +164,23 @@ describe("Tama", () => {
   });
 
   //----Tama Dies ///////////////////////////////////////////////////
+  
+  test("should show messge, I'm enjoying life" , () => {
+    jest.advanceTimersByTime(1001);
+    tama.aliveCheck();
+    expect(tama.aliveCheck()).toBe("I'm enjoying life");
+  });
+  
+  test("should show message, Im good", () => {
+    jest.advanceTimersByTime(8001);
+    tama.aliveCheck();
+    expect(tama.aliveCheck()).toBe("Im good");
+  });
+  
   test("should kill Tama if the food, sleep and play levels equal 0 in 10 seconds", () => {
     jest.advanceTimersByTime(10001);
     tama.aliveCheck();
-    expect(tama.aliveCheck()).toBe(false);
+    expect(tama.aliveCheck()).toBe("Your Tamagotchi is dead!");
   });
 });
 
