@@ -7,12 +7,12 @@ export class Tamagotchi {
     this.wait = false;
     this.alive = true;
   }
+
   setHunger() {
     setInterval(() => {
       this.foodLevel--;
     }, 1000);
   }
-
   areYouStarving() {
     if (this.foodLevel > 0) {
       return false;
@@ -23,7 +23,6 @@ export class Tamagotchi {
   feed() {
     this.foodLevel = 10;
   }
-
   feedSnack(){
     if(this.foodLevel >= 9) { 
       return "Im full";     
@@ -31,15 +30,12 @@ export class Tamagotchi {
       this.foodLevel += 1;
     }
   }
-
-
   waiting() {
     if (this.wait === false && this.alive === true) {
       this.foodLevel = 10
       this.wait = true;
       setTimeout(() => {
         this.wait = false;
-
       }, 2001)
     }
   }
@@ -54,8 +50,6 @@ export class Tamagotchi {
       this.sleepLevel--;
     }, 1000);
   }
-
-
   areYouSleepy() {
     if (this.sleepLevel > 0) {
       return false;
@@ -63,18 +57,22 @@ export class Tamagotchi {
       return true;
     }
   }
-
   sleep() {
     this.sleepLevel = 10;
   }
-
+  nap(){
+    if(this.sleepLevel >= 6) { 
+      return "Im not Tired";     
+    } else {
+      this.sleepLevel += 5;
+    }
+  }
   waiting2() {
     if (this.wait === false && this.alive === true) {
       this.sleepLevel = 10
       this.wait = true;
       setTimeout(() => {
         this.wait = false;
-
       }, 5001)
     }
   }
