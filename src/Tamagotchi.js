@@ -60,6 +60,7 @@ export class Tamagotchi {
   sleep() {
     this.sleepLevel = 10;
   }
+
   nap(){
     if(this.sleepLevel >= 6) { 
       return "Im not Tired";     
@@ -67,6 +68,7 @@ export class Tamagotchi {
       this.sleepLevel += 5;
     }
   }
+  
   waiting2() {
     if (this.wait === false && this.alive === true) {
       this.sleepLevel = 10
@@ -99,7 +101,13 @@ export class Tamagotchi {
   play() {
     this.playfulLevel = 10;
   }
-
+  giveToy(){
+    if(this.playfulLevel >= 8) { 
+      return "NO!!!";     
+    } else {
+      this.playfulLevel += 3;
+    }
+  }
   waiting3() {
     if (this.wait === false && this.alive === true) {
       this.playfulLevel = 10

@@ -110,7 +110,7 @@ describe("Tama", () => {
     tama.nap();
     expect(tama.sleepLevel).toEqual(8);
   });
-  
+
   test("should not increase sleepLevel by 5 if sleepLevel is at 9", () => {
     jest.advanceTimersByTime(1001);
     expect(tama.sleepLevel).toEqual(9);
@@ -150,7 +150,18 @@ describe("Tama", () => {
     jest.advanceTimersByTime(4001);
     expect(tama.wait).toBe(false)
   });
+  test("should increase play level by 3, when given a toy when playfulLevel is at 6", () => {
+    jest.advanceTimersByTime(3001);
+    tama.giveToy();
+    expect(tama.playfulLevel).toEqual(10);
+  });
+  test("should not increase playfulLevel by 3 if playfulLevel is at 9", () => {
+    jest.advanceTimersByTime(1001);
+    expect(tama.playfulLevel).toEqual(9);
+    expect(tama.giveToy()).toEqual("NO!!!");
+  });
 
+  //----Tama Dies ///////////////////////////////////////////////////
   test("should kill Tama if the food, sleep and play levels equal 0 in 10 seconds", () => {
     jest.advanceTimersByTime(10001);
     tama.aliveCheck();
