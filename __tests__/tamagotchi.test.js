@@ -48,11 +48,24 @@ describe("Tama", () => {
     jest.advanceTimersByTime(2002); 
     expect(tama.wait).toBe(false)
   });
-  
+
   test("should see an alert message when the food level is 3 or below", () => {
     jest.advanceTimersByTime(7001); 
     expect(tama.messageFood()).toEqual("I'm hungry!");
   });
+
+  test ("should increase food level by 1, when given a snack when foodLevel is at 2" , () => {
+    jest.advanceTimersByTime(8001); 
+    tama.feedSnack(); 
+    expect(tama.foodLevel).toEqual(3);
+  });
+  test ("should not increase foodLevel by 1 if foodLevel is at 9" , () => {
+    jest.advanceTimersByTime(1001); 
+    expect(tama.foodLevel).toEqual(9);
+    expect(tama.feedSnack()).toEqual("Im full");
+  });
+
+  
 
   //sleep level////////////////////////////////////////
   test ("should have a sleep level of 10 when created" ,() => {

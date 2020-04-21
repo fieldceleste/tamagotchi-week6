@@ -24,6 +24,15 @@ export class Tamagotchi {
     this.foodLevel = 10;
   }
 
+  feedSnack(){
+    if(this.foodLevel >= 9) { 
+      return "Im full";     
+    } else {
+      this.foodLevel += 1;
+    }
+  }
+
+
   waiting() {
     if (this.wait === false && this.alive === true) {
       this.foodLevel = 10
